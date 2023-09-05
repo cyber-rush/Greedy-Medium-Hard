@@ -65,6 +65,7 @@ class Solution
                 platform_needed--;
                 j++;
             }
+            
             maxPlatform = Math.max(maxPlatform, platform_needed);
         }
         return maxPlatform;
