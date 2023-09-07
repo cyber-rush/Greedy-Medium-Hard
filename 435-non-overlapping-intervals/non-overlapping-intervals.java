@@ -10,9 +10,11 @@ class Solution {
                 list.add(new int[]{intervals[i][0], intervals[i][1]});
             }
             else{
+                //If it is overlapping then Always try to take the min end element
                 list.get(list.size() - 1)[1] = Math.min(list.get(list.size() - 1)[1], intervals[i][1]);
             }
         }
+        //As we have merged the overlapping ones this means we have reduced the intervals..Thus at the end we just need to find the difference of elements originally in the array and number of elements currently
         return n - list.size();
     }
 }
